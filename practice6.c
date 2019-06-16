@@ -18,6 +18,11 @@ PHY_MEMP quicksort(PHY_MEMP a, int low, int high);
 
 int main(int argc, const char *argv[])
 {
+    if (argc < 2) {
+        printf("%s\n", "please input practice6 FIFO or LRU");
+        return 0;
+    }
+
     if (!strcmp(argv[1], "FIFO")) {
         FIFO(generate_RS());
     } else if (!strcmp(argv[1], "LRU")) {
